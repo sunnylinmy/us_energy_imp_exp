@@ -44,7 +44,7 @@ queue()
 function ready(error, map, data, country){
 	var rateById = {};
     var nameById = {};
-   // data0 = data.imports;
+
     var green_range = [0.1, 1, 10, 100, 1000,10000,100000];
 	var color_green = ['rgb(229,245,224)','rgb(199,233,192)','rgb(161,217,155)','rgb(116,196,118)','rgb(65,171,93)','rgb(35,139,69)','rgb(0,90,50)'];
 	var blue_range = [0.1, 1, 10, 100, 1000,10000];
@@ -53,7 +53,6 @@ function ready(error, map, data, country){
 	var data0=data.imports;
 	map_range = blue_range;
 	map_color = color_blue;
-	//ready_ready();
 
 	d3.selectAll("button").on("click", function(d){
 		variable = d3.select(this).attr("id");
@@ -62,21 +61,18 @@ function ready(error, map, data, country){
 			map_range = green_range;
 			map_color = color_green;
 			ready_ready(data0,jsonArr1);
-			//jsonArr =[];
 		}else if (variable=="importbutton"){
 			data0 = data.imports;
 			map_range = blue_range;
 			map_color = color_blue;	
 			ready_ready(data0,jsonArr2);	
-			//jsonArr =[];	
 		}
 	});
 
 function ready_ready(data,jsonArr){
-  //var jsonArr =[];
+
   var_name = data[0];
   num_data = data.splice(1,data.length-1);
-  //jsonArr = [];
 
     for (i=0; i < num_data.length;i++){
       jsonArr.push({
@@ -87,16 +83,12 @@ function ready_ready(data,jsonArr){
         CTY_CODE: num_data[i][4]
       });
     }
-    console.log(data.splice(1,data.length-1));
     sortedState = jsonArr.map(state).sort(d3.ascending);   // get state name
-    console.log(num_data.length);
-    console.log(jsonArr.length);
 
     var stateName;
     stateName=unique(sortedState);
 
     allsortedState = jsonArr.map(val).sort(d3.ascending);   // get ranking of all the value
-    //console.log(allsortedState);
 
     var sumByState_json = [];
     
