@@ -27,29 +27,22 @@ var width = window.outerWidth *0.5,
   	height = 500;
 
 
-  var div = d3.select("#container").append("div")   
+var div = d3.select("#container").append("div")   
   .attr("class", "tooltip")               
   .style("opacity", 0);
 
-  var button_container = d3.select("#button-container").style("width",window.outerWidth*0.14+"px").style("margin", "10px auto");
+var button_container = d3.select("#button-container").style("width",window.outerWidth*0.14+"px").style("margin", "10px auto");
 
-  var svg = d3.select("#container").append("svg")
+var svg = d3.select("#container").append("svg")
   .attr("width", width)
   .attr("height", height)
   .attr("margin-left",width*0.25)
   .style("margin", "10px auto")
   .attr("id","map-container");
 
-  var projection = d3.geo.albers()
-  .rotate([-105, 0])
-  .center([-10, 65])
-  .parallels([52, 64])
-  .scale(700)
-  .translate([width / 2, height / 2]);
+var projection = d3.geo.albersUsa().translate([width / 2, height / 2]);
 
-  var projection = d3.geo.albersUsa().translate([width / 2, height / 2]);
-
-  var path = d3.geo.path().projection(projection);
+var path = d3.geo.path().projection(projection);
 
   //Reading map file and data
 
