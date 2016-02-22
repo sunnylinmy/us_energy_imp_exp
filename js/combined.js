@@ -47,8 +47,8 @@ function ready(error, map, data, country){
 
     var green_range = [0.1, 1, 10, 100, 1000,10000,100000];
 	var color_green = ['rgb(229,245,224)','rgb(199,233,192)','rgb(161,217,155)','rgb(116,196,118)','rgb(65,171,93)','rgb(35,139,69)','rgb(0,90,50)'];
-	var blue_range = [0.1, 1, 10, 100, 1000,10000,100000];
-	var color_blue = ['rgb(222,235,247)','rgb(198,219,239)','rgb(158,202,225)','rgb(107,174,214)','rgb(66,146,198)','rgb(33,113,181)','rgb(8,69,148)'];
+	var blue_range = [0.1, 1, 10, 100, 1000,10000];
+	var color_blue = ['rgb(198,219,239)','rgb(158,202,225)','rgb(107,174,214)','rgb(66,146,198)','rgb(33,113,181)','rgb(8,69,148)'];
 
 	var data0=data.imports;
 	map_range = blue_range;
