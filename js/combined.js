@@ -3,7 +3,7 @@ var width = window.outerWidth *0.5,
 
 var button_container = d3.select("#button-container").style("width",window.outerWidth*0.14+"px").style("margin", "10px auto");
 
-query_str="data/imp_exp2111.json";
+query_str="data/exp_imp.json";
 
 d3.select(".tooltip").remove();
 d3.select("#map-container").remove();
